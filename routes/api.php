@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NotaController;
-
+Route::get('/pong', function () {
+    return response()->json(['message' => 'pong'], 200);
+});
 // Rutas para la autenticación
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
